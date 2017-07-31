@@ -3,7 +3,7 @@
 # dictionary stuff needed for the test DB code to have words to pull from
 sudo apt-get update -y
 sudo apt-get install -y wamerican language-pack-id apache2-utils
-sudo apt-get install -y fabric vim lynx git tofrodos python-paver python-setuptools libcap-dev python-dev libffi-dev python3-dev python3.4-venv
+sudo apt-get install -y fabric vim lynx git tofrodos python-paver python-setuptools libcap-dev python-dev libffi-dev python3-dev python3.4-venv python-virtualenv
 sudo locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
 sudo dpkg-reconfigure locales
 
@@ -15,7 +15,7 @@ if [ ! -d "sideboard" ]; then
   git clone https://github.com/migetman9/sideboard
 fi
 cd sideboard
-python3 -m venv env
+virtualenv -p python3 env --always-copy
 paver install_deps
 sudo apt-get install -y postgresql postgresql-contrib
 printf 'cms\ncms' | sudo -u postgres createuser -s -d -P cms
