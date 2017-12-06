@@ -1,5 +1,12 @@
 Hello! Welcome to basic instructions to use DareCMS or sideboard or whatever!
 
+Make a test admin user at
+localhost:8282/cms/accounts/insert_test_admin
+
+the login is
+admin@example.com
+password
+
 Vagrant instructions!
 
 You must have vagrant installed.
