@@ -17,9 +17,11 @@ if [ ! -d "sideboard" ]; then
   git clone https://github.com/daredoes/sideboard
 fi
 cd sideboard
+cd plugins
 if [! -d "darecms"]; then
   git clone https://github.com/daredoes/darecms
 fi
+cd ..
 virtualenv -p python3 env --always-copy
 paver install_deps
 sudo apt-get install -y postgresql postgresql-contrib
