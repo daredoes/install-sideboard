@@ -18,10 +18,10 @@ if [ ! -d "sideboard" ]; then
 fi
 cd sideboard
 cd plugins
-if [! -d "darecms"]; then
+if [ ! -d "darecms" ]; then
   git clone https://github.com/daredoes/darecms
 fi
-if [! -d "action_items"]; then
+if [ ! -d "action_items" ]; then
   git clone https://github.com/daredoes/action_items
 fi
 cd ..
