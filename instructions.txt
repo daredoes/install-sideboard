@@ -1,0 +1,38 @@
+Hello! Welcome to basic instructions to use DareCMS or sideboard or whatever!
+
+Vagrant instructions!
+
+You must have vagrant installed.
+The command to boot vagrant is `vagrant up`
+The command to login to the virtual machine is `vagrant ssh`
+The command to shutdown vagrant is `vagrant halt`
+
+Sideboard instructions!
+
+The command to install all dependencies is `paver install_deps` this must be executed while the Present Working Directory is `/sideboard`
+The command to pull latest updates for all plugins is `paver pull_plugins` this must be executed in the Present Working Directory of `/sideboard`
+The command to reset the database for new data or updates to the model is `sep reset_db` and can be executed from anywhere
+
+The way to log into the PSQL database is
+`psql -U cms --host localhost` and the password is `cms`
+
+To boot the instance and login use
+`vagrant up` and then `vagrant ssh`
+
+Once logged in you'll be in a folder that has two subfolders, one of these will be `vagrant` and the other will be `uber`.
+Enter the uber folder by doing `cd uber`. Once here, you'll be in the folder that contains this set of instructions. 
+
+Next, enter the subfolder `sideboard` by inputting `cd sideboard`.
+
+To run the webserver type `run_server` this will locate the python executable for the webserver, and start the main python file.
+
+If that command cannot be found, you are most likely using a Windows Machine. Enter the following commands.
+`cd ~`
+`sudo apt-get install dos2unix`
+`sudo dos2unix .bash_aliases`
+now log in and out by entering
+`Ctrl+D` then `vagrant ssh`
+
+You can use PyCharm as your IDE, but this requires the Student or Professional Edition. For instructions on that email me@daredoes.work
+
+
