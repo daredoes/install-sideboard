@@ -19,7 +19,7 @@ fi
 cd sideboard
 cd plugins
 if [ ! -d "darecms" ]; then
-  git clone https://github.com/daredoes/darecms
+  git clone -b action-items https://github.com/daredoes/darecms
 fi
 if [ ! -d "action_items" ]; then
   git clone https://github.com/daredoes/action_items
